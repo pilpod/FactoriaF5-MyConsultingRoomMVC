@@ -33,7 +33,6 @@ class AppointmentController {
 
     public function create(array $data)
     {
-        echo 'function create';
         $newAppointment = new Appointment($data['nombre'], $data['tema'], $data['descripcion']);
         $newAppointment->saveAppointment();
 
@@ -41,7 +40,6 @@ class AppointmentController {
     }
 
     public function delete($id){
-        echo 'function delete';
         $appointment = new Appointment();
         // $rowToDelete = $appointment->findById($id);
         $appointment->deleteAppointment($id);
@@ -66,8 +64,4 @@ class AppointmentController {
 
 }
 
-?>
-
-<?php 
-var_dump($_GET);
 ?>

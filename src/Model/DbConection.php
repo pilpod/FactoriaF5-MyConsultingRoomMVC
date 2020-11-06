@@ -37,9 +37,3 @@ class DbConection {
 
 }
 ?>
-
-<?php 
-/*     $database = new DbConection();
-    $data = $database->mysql->query("SELECT * FROM `citas`");
-    var_dump($data);
- */?>
