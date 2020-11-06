@@ -1,0 +1,5 @@
+*.swp
+.idea/
+vendor/
+src/Model/DataConect.json
+.phpunit.result.cache
