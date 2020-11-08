@@ -14,7 +14,7 @@
             <tr class="table-appointments-row bg-dark-lighter">
               <td scope="row"><?= $appointment->getName() ?></td>
               <td><?= $appointment->getTopic() ?></td>
-              <td><?= $appointment->getDate() ?></td>
+              <td class="tdDate"><?= $appointment->getDate() ?></td>
               <td class="d-none d-sm-table-cell"><?= $appointment->getDescription() ?></td>
               <td>
                   <div class="d-flex justify-content-around">

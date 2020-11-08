@@ -46,8 +46,10 @@
 
         public function getDate() 
         {
-            $date = new Date();
-            $date = $date->FormatDate($this->date);
+            $date = date_create($this->date);
+            $formatDate = "d / m / y";
+            $date = date_format($date, $formatDate);
+            
             return $date;
         }
 

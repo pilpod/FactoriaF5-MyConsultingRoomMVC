@@ -2,9 +2,9 @@
 
 namespace App\Model;
 
-interface IFormat {
+interface IDataFormat {
 
-    public function FormatDate() : string;
+    public function FormatDate($date) : string;
 
 }
 

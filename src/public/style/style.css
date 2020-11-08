@@ -107,6 +107,10 @@
     border-right-width: 1px!important;
 }
 
+.table .tdDate {
+    white-space: nowrap;
+}
+
 .btn-round{
     border-radius: 16px;
     height: 32px;
