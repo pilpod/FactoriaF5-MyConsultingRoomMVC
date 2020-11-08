@@ -46,11 +46,9 @@
 
         public function getDate() 
         {
-            $date = date_create($this->date);
-            $formatDate = "d / m / y";
-            $date = date_format($date, $formatDate);
-            
-            return $date;
+            $date = new Date($this->date);
+            $formatedDate = $date->FormatDate();
+            return $formatedDate;
         }
 
         public function getId()

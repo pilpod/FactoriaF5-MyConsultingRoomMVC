@@ -4,7 +4,7 @@ namespace App\Model;
 
 interface IDataFormat {
 
-    public function FormatDate($date) : string;
+    public function FormatDate() : string;
 
 }
 

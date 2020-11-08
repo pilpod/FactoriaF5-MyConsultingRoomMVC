@@ -1,7 +1,7 @@
 <?php 
 
 namespace App\Model;
-require('IDataFormat.php');
+use App\Model\DbConection;
 
 
 class Date implements IDataFormat {
@@ -13,17 +13,15 @@ class Date implements IDataFormat {
         $this->date = $date;
     }
 
-    public function FormatDate($date) : string
+    public function FormatDate() : string
     {
-        $format = "d \de m y";
-        $date = $date->format($format);
+        setlocale(LC_TIME, "spanish");
+        $date = date_create($this->date);
+        $formatDate = "d M Y";
+        $date = date_format($date, $formatDate);
         return $date;
     }
 
 }
-
-$date = new Date('2000-01-01 00:00:00');
-$dateFormated = $date->FormatDate();
-echo $dateFormated;
 
 ?>
