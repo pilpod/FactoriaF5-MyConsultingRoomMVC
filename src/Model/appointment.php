@@ -3,6 +3,7 @@
     namespace App\Model;
 
     use App\Model\DbConection;
+    use App\Model\Date;
 
     class Appointment {
         
@@ -45,7 +46,9 @@
 
         public function getDate() 
         {
-            return $this->date;
+            $date = new Date();
+            $date = $date->FormatDate($this->date);
+            return $date;
         }
 
         public function getId()
