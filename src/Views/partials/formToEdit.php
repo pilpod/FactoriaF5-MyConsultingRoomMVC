@@ -12,7 +12,7 @@
 
       <div class="modal-body bg-dark">
 
-          <form class="form-group" action="upload" method="POST">
+          <form class="form-group" action="?action=edit" method="POST">
               
               <label for="inputEditName">Nombre</label>
               <input type="text" class="form-control bg-dark-lighter border-primary" id="inputEditName" placeholder="Name" value="<?= $appointment->getName() ?>" required>

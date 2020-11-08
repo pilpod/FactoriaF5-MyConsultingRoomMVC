@@ -78,7 +78,7 @@
             $sql = "SELECT * FROM `citas`  WHERE `id` = {$id} ";
             $query = $database->mysql->query($sql); 
             $result = $query->fetchAll();
-            return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"]);
+            return new self($result[0]["nombre"], $result[0]["tema"], $result[0]["descripcion"], $result[0]["fecha"], $result[0]["id"]);
         }
 
         public function editAppointment($id){
@@ -90,9 +90,6 @@
             $this->database->mysql->query($sql);
         }
 
-        public function getAppointment($id){
-
-        }
     };
 ?>
 
