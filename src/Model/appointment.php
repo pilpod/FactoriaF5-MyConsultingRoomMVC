@@ -4,8 +4,6 @@
 
     use App\Model\DbConection;
 
-    // require('Dbconection.php');
-
     class Appointment {
         
         private string $name;
@@ -82,7 +80,8 @@
         }
 
         public function editAppointment($id){
-
+            $sql = "UPDATE `{$this->table}` SET `nombre` = '{$this->name}', `tema` = '{$this->topic}', `descripcion` = '{$this->description}' WHERE `id` = {$id}";
+            $this->database->mysql->query($sql);
         }
 
         public function deleteAppointment($id){

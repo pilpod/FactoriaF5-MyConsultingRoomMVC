@@ -31,7 +31,8 @@ class AppointmentController {
 
         if (isset($_GET) && isset($_GET["action"]) && ($_GET["action"] == "edit")){
             $id = $_GET['id'];
-            $this->edit($id);
+            $newData = $_POST;
+            $this->edit($id, $newData);
             return;
         }
 
@@ -56,14 +57,16 @@ class AppointmentController {
     }
     public function upload($id){
         $appointment = Appointment::findById($id);
-        var_dump($appointment);
         new View("AppointmentEdit", [
             "appointment" => $appointment,
             ]);
     }
 
-    public function edit($id){
-        
+    public function edit($id, $newData){
+        $appointment = new Appointment($newData['name'], $newData['topic'], $newData['description']);
+        $appointment->editAppointment($id);
+
+        $this->index();
     }
 
     public function index(): void
